@@ -7,6 +7,8 @@
   --green: #2ecc71;
   --yellow: #f7dc6f;
   --lightBlue: #6495ed;
+  --blackblue: #081b29;
+  --red: #cf1a03;
 }
 
 * {
@@ -17,17 +19,17 @@
 }
 
 body {
-  background: #081b29;
+  background: var(--blackblue);
   color: var(--light);
 }
 
 .mainHeader {
+  background: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: transparent;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,11 +49,18 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: 0.5s;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--red);
+  background: var(--green);
+  border: none;
 }
 
 .navigation a:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 
 .navigation a.active {
@@ -63,10 +72,13 @@ body {
   display: flex;
   align-items: center;
   padding: 0 10%;
+  background: var(--yellow);
 }
 
 .main-content {
+  background: var(--blue);
   max-width: 600px;
+  height: 50%;
 }
 
 .main-content h1 {
@@ -85,6 +97,7 @@ body {
 }
 
 .main-content .btn-box {
+  /* background: var(--lightBlue); */
   display: flex;
   justify-content: space-between;
   width: 345px;
@@ -95,15 +108,37 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  /* background: var(--red); */
   width: 150px;
   height: 100%;
-  background: var(--green);
   border: 2px solid var(--green);
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 19px;
-  color: var(--lightBlue);
+  color: var(--light);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
-  margin-top: 10px;
+  margin: 10px;
+}
+
+.div1 {
+  color: var(--blue);
+}
+
+.div2 {
+  color: var(--yellow);
+}
+
+.mainDiv {
+  background: var(--red);
+  position: absolute;
+  width: 470px;
+  bottom: 40px;
+}
+
+.mainDiv1 {
+  background: var(--green);
+  position: relative;
+  right: 30px;
+  bottom: 140px;
 }
