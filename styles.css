@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
-
 :root {
   --black: #1c2833;
   --blue: #4c0dca;
@@ -49,6 +48,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
+  transition: 0.5s;
 }
 
 .btn {
@@ -72,11 +72,13 @@ body {
   display: flex;
   align-items: center;
   padding: 0 10%;
-  background: var(--yellow);
+  background: url("deve.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-content {
-  background: var(--blue);
   max-width: 600px;
   height: 50%;
 }
@@ -97,7 +99,6 @@ body {
 }
 
 .main-content .btn-box {
-  /* background: var(--lightBlue); */
   display: flex;
   justify-content: space-between;
   width: 345px;
@@ -108,7 +109,6 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  /* background: var(--red); */
   width: 150px;
   height: 100%;
   border: 2px solid var(--green);
@@ -121,24 +121,81 @@ body {
   margin: 10px;
 }
 
-.div1 {
-  color: var(--blue);
-}
-
-.div2 {
-  color: var(--yellow);
-}
-
-.mainDiv {
-  background: var(--red);
+.icons {
   position: absolute;
-  width: 470px;
-  bottom: 40px;
+  bottom: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.mainDiv1 {
-  background: var(--green);
+.icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--lightBlue);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--lightBlue);
+  text-decoration: none;
   position: relative;
-  right: 30px;
-  bottom: 140px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.icons a:hover {
+  color: var(--blackblue);
+}
+
+.icons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--lightBlue);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.icons a:hover::before {
+  width: 100%;
+}
+
+#mainFooter {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainFooter p {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mainSpan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+
+.mainSpan:hover {
+  background: var(--blackblue);
+  opacity: 0.8;
 }
